@@ -1,0 +1,24 @@
+{
+  "name": "scripting-with-bitcoinjs",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "repository": "git@github.com:Eunovo/scripting-with-bitcoinjs.git",
+  "author": "Eunovo <eunovo9@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "axios": "^1.2.6",
+    "bitcoinjs-lib": "^6.1.0",
+    "ecpair": "^2.1.0",
+    "tiny-secp256k1": "^2.2.1",
+    "varuint-bitcoin": "^1.1.2"
+  },
+  "scripts": {
+    "build": "tsc",
+    "run:p2_addition_script": "yarn build && node dist/pay_to_addition_script.js",
+    "run:p2_address_with_secret": "yarn build && node dist/pay_to_address_with_secret.js"
+  }
+}
